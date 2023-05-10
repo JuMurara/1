@@ -1,0 +1,104 @@
+<?php
+
+// declarar variável 
+//caracter $
+
+$texto = "olá mundo!!"; //string
+$idade = 15; //int
+$valor = 500.52; //double
+$status = true; // boolean
+
+//comando escrever 
+echo $texto;
+echo "<hr>";
+
+$texto = "2° ano ADS - 2023";
+$texto = 25;
+$texto = 1250.30;
+
+echo $texto;
+
+
+
+
+<?php
+$a = 50;
+$b = 70;
+
+//IF convencional
+if ($a == $b) {
+    echo "são iguais";
+} else if ($a > $b){
+    echo "A é maior";
+}else{
+    echo "B é maior";
+}
+
+echo"<hr>";
+
+//IF intermediario
+echo ($a == $b) ? "são iguais" : "são diferentes";
+
+
+echo "<hr>";
+
+
+//SWICH
+$codigo = 2;
+switch ($codigo){
+    case 1 : 
+        echo "codigo é 1";
+        break;
+    case 2 :
+        echo "codigo é 2";
+        break;
+    default :
+        echo "entrou em defult";
+        break;
+
+}
+
+
+
+<?php
+
+for ($i=0; $i < 10; $i++) { 
+    echo $i . "<br>";
+}
+
+echo "<hr>";
+
+$i = 0;
+while ($i <= 10) {
+    echo $i++ . "<br>";
+}
+
+
+echo "<hr>";
+
+
+$i = 0;
+do {
+    echo $i . "<br>";
+    $i++;
+} while ($i <= 10);
+
+
+
+
+echo "ANTES DO FOR <br>";
+
+for ($i=0; $i < 10 ; $i++) { 
+
+    if ($i == 4) {
+        echo "BREAK <br>";
+        break;
+    }
+
+    echo $i ."<br>";
+}
+
+echo "DEPOIS DO FOR <br>";
+
+
+
