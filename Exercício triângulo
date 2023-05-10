@@ -1,0 +1,67 @@
+package javaapplication1;
+
+import java.util.Scanner;
+import triangulo.triangulo;
+
+public class exemplo1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        triangulo x= new triangulo();
+        triangulo y= new triangulo();
+        
+        System.out.println("informe o tamanho do lado do triangulo X");
+        x.a = sc.nextDouble();
+        System.out.println("informe o tamanho do lado do triangulo X");
+        x.b = sc.nextDouble();
+        System.out.println("informe o tamanho do lado do triangulo X");
+        x.c = sc.nextDouble();
+
+        System.out.println("informe o tamanho do lado do triangulo Y");
+        y.a = sc.nextDouble();
+        System.out.println("informe o tamanho do lado do triangulo Y");
+         y.b = sc.nextDouble();
+        System.out.println("informe o tamanho do lado do triangulo Y");
+         y.c = sc.nextDouble();
+
+        x.calcarea();
+        y.calcarea();
+
+        
+
+        System.out.printf("Tamanho da área do triangulo X é: %.4f%n", x.area);
+        System.out.printf("Tamanho da área do triangulo Y é: %.4f%n", y.area);
+
+        if (x.area > y.area) {
+            System.out.println("A área triângulo X é maior");
+        } else   if (x.area < y.area){ 
+            System.out.println("O triângulo Y é maior");
+        } else  if (x.area == y.area){
+              System.out.println("igual");
+        }
+    }
+
+    
+    
+    
+}
+
+
+
+package triangulo;
+
+public class triangulo {
+   
+
+
+    public double a;
+    public double b;
+    public double c;
+    public double area;
+    
+    public void calcarea () {
+        double p= (this.a + this.b + this.c) / 2.0;
+        this.area = Math.sqrt(p*(p - this.a) * (p - this.b) * (p - this.c));
+    }
+    
+}
+    
